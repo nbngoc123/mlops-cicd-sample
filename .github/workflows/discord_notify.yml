@@ -16,7 +16,7 @@ jobs:
       - name: Send message to Discord
         uses: appleboy/discord-action@v1.2.0
         with:
-          webhook_url: ${{ secrets.WEBHUB_URL }}
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
           username: "Tin nhắn của Paimon"
           message: |
             🚀 **Có code mới vừa được Push!**
