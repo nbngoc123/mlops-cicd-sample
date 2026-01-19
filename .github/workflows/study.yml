@@ -21,3 +21,12 @@ jobs:
           lsb_release -a
           echo "Phien ban Python co san:"
           python3 --version
+
+      - name: Checkout code
+        uses: action/checkout@v4
+
+      - name: Set up Python
+        uses: action/setup-python@v5
+
+        with: 
+          python-vertion: '3.12'

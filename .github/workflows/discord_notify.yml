@@ -1,0 +1,25 @@
+name: Discord Notification
+
+on:
+  push: 
+    branches:
+      - dev
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest 
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Send message to Discord
+        uses: appleboy/discord-action@v1.2.0
+        with:
+          webhook_url: ${{ secrets.WEBHUB_URL }}
+          username: "Tin nhắn của Paimon"
+          message: |
+            🚀 **Có code mới vừa được Push!**
+            - **Người thực hiện:** ${{ github.actor }}
+            - **Nội dung commit:** ${{ github.event.head_commit.message }}
+            - **Link xem thay đổi:** ${{ github.event.head_commit.url }}
