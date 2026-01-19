@@ -14,3 +14,10 @@ jobs:
 
       - name: Kiem tra thoi gian
         run: date
+      
+      - name: Kiem tra cau hinh may ao
+        run: |
+          echo "Ten he dieu hanh:"
+          lsb_release -a
+          echo "Phien ban Python co san:"
+          python3 --version
