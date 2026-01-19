@@ -1,0 +1,16 @@
+name: Study GitHub action
+
+on:
+  push: 
+    branches:
+      - dev
+  
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chao hoi
+        run: echo "Workflow dang chay thanh cong!"
+
+      - name: Kiem tra thoi gian
+        run: date
